@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon_logo.png" type="image/png">
+    <link href="../css/global_style.css" rel="stylesheet" type="text/css">
+    <link href="../css/article.css" rel="stylesheet" type="text/css">
+    <link href="../css/article_mobil.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <title>Статья</title>
+</head>
+<body>
+
+    <div class="preloader" id="preloader">
+        <div id="floatingBarsG">
+            <div class="blockG" id="rotateG_01"></div>
+            <div class="blockG" id="rotateG_02"></div>
+            <div class="blockG" id="rotateG_03"></div>
+            <div class="blockG" id="rotateG_04"></div>
+            <div class="blockG" id="rotateG_05"></div>
+            <div class="blockG" id="rotateG_06"></div>
+            <div class="blockG" id="rotateG_07"></div>
+            <div class="blockG" id="rotateG_08"></div>
+        </div>        
+    </div>
+    <script>
+        window.onload = function () {
+            let preloader = document.getElementById("preloader");
+            preloader.style.display = "none";
+        }
+    </script>
+
+    
+
+    <div class="total_container">
+
+        <div> <!--ellipse_desktop-->        
+            <img id="ellipse_01" src="../images/ellipse_article.svg">   
+            <img id="ellipse_02" src="../images/ellipse_article.svg">        
+            <img id="ellipse_03"src="../images/ellipse_article.svg">       
+                     
+        </div>   
+       
+
+        <header>         
+            <input type="checkbox" id="checkbox_menu">
+           
+            <label for="checkbox_menu"> <!--logo-->
+                <img src="../images/logo.png">
+            </label>
+
+            <div class="burger_line first_line"></div>
+            <div class="burger_line second_line"></div>
+            <div class="burger_line third_line"></div>
+            <div class="burger_line fourth_line"></div>
+
+            <nav class="header__nav">
+                <a href="main.html" target="_blank">Главная</a>
+                <a href="actives.html" target="_blank">Активы и тарифы</a>
+                <a href="howitworks.html" target="_blank">Как это работает</a>
+                <a href="error.html" target="_blank">Криптобезопасность</a>
+                <a href="news.html" target="_blank">Новости</a>
+
+                <a href="tg://resolve?domain=it_academy_by" target="_blank">Присоединиться</a>
+            </nav>
+                                  
+        </header>
+
+        <div class="container crumbs"><!--crumbs-->  
+            <div class="crumbs_content">
+                <a href="main.html">Главная страница</a>
+                <p>&#8594;</p>
+                <a href="news.html">Новости</a>
+                <p>&#8594;</p>
+                <a href="news.html">Статья</a>
+            </div>
+        </div>
+
+                  
+        <div class="container article"><!--article-->           
+            <div>
+                <div class="article_item">
+                    
+                    <div>
+                        <p>12.04.22</p>
+                        <p class="article__eye">3.5</p>
+                    </div>             
+
+                    <h2>
+                        Поиск монет BTC на более ранних версиях Bitcoin
+                        Core с критической уязвимостью OpenSSL 0.9.8 CVE-2008-0166
+                    </h2>
+
+                    <div class="article_filter">                       
+                        <a href="news.html">
+                            Криптовалюта
+                        </a>               
+                        <a href="news.html#folder2link">
+                            Популярное
+                        </a>                                       
+                        <a href="news.html">
+                            Новинки
+                        </a>                                      
+                        <a href="news.html">
+                            Прогнозы
+                        </a>                        
+                    </div>
+                
+
+                    <iframe src="https://www.youtube.com/embed/opga3OANVFw" 
+                    title="Как Правильно Установить, Настроить и Использовать Bitcoin Core Кошелек // Пошаговая Инструкция" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>                    
+
+                    <p>
+                        В этой статье мы создадим инструмент который будет генерировать Биткоин Адреса (P2KH), используя уязвимость CVE-2008-0166. Это исследовательский 
+                        проект для поиска монет BTC на более ранних версиях программного клиента Bitcoin Core.<br><br>
+                        Критической уязвимость версии OpenSSL 0.9.8 CVE-2008-0166 заполнялась только идентификатором процесса. Из-за различий между порядком байтов и sizeof(long)
+                        выходные данные зависят от архитектуры: 32-битный прямой порядок байтов (например, i386), 64-битный прямой порядок байтов (например, amd64, ia64), 32-битный
+                        прямой порядок байтов (например, powerpc, sparc). PID 0 — это ядро, а PID_MAX (32768) не достигается при переносе, поэтому для каждой архитектуры было 32767 возможных потоков случайных чисел.<br><br>
+                        Программный клиент Bitcoin Core использует библиотеку OpenSSL. В частности, он использует функцию «EC_KEY_generate_key()» для генерации Биткоин Адресов (например, ключа) для получения платежей. 
+                        Старые версии Bitcoin Core генерируют и хранят 100 ключей в wallet.dat<br><br>
+                        Новый ключ генерируется только при получении Биткоин платежа. Таким образом, программный клиент Bitcoin Core сохраняет пул из 100 неиспользуемых Биткоин Ключей (адресов). Состояние внутреннего 
+                        генератора случайных чисел зависит от того, какие другие вызовы были сделаны в библиотеке OpenSSL до вызова 'EC_KEY_generate_key()'. Вызовы, влияющие на внутреннее состояние ГСЧ: «RAND_add(8)», «RAND_bytes(8)» и «RAND_bytes(32)».<br><br>
+                        Таким образом, исследование заключалось в том, чтобы просмотреть множество старых источников Биткоина, чтобы выяснить, какие вызовы были сделаны, которые повлияли на внутреннее состояние ГСЧ перед вызовом «EC_KEY_generate_key()». 
+                        Путь вызова меняется между версиями программного клиента Bitcoin Core
+
+                    </p>
+
+                    <div>
+                        <p class="article__like">350</p>
+                        <p class="article__dislike">10</p>
+                        <p class="article__message">25</p>
+                    </div>   
+
+                </div>
+
+                
+
+                <div class="read__today">
+                    <p>
+                        Читают сегодня:
+                    </p>
+    
+                    <div>
+
+                        <input type=radio name=read__today_radio id=read__radio01 checked class='RadioRead'>
+                        <label for=read__radio01></label>                          
+                        <div class="read__today__item">
+                            <div>
+                                <img src="../images/read_today_01.png">
+                            </div>
+                            <h3>Что такое DeFi-стекинг</h3>    
+                            <p>03.02.22</p>    
+                            <div>
+                                <p class="article__like">350 <span> (+45)</span></p>
+                                <p class="article__message">25 <span> (+14)</span></p>
+                            </div>        
+                            <a href="#">Читать далее &#8594;</a>               
+                        </div>
+
+                        <input type=radio name=read__today_radio id=read__radio02  class='RadioRead'>
+                        <label for=read__radio02 style="left: 25px"></label>        
+                        <div class="read__today__item">
+                            <div>
+                                <img src="../images/read_today_02.png">
+                            </div>
+                            <h3>Как заработать на DeFi</h3>    
+                            <p>05.02.22</p>    
+                            <div>
+                                <p class="article__like">350 <span> (+45)</span></p>
+                                <p class="article__message">25 <span> (+14)</span></p>
+                            </div>        
+                            <a href="#">Читать далее &#8594;</a>               
+                        </div>
+
+                        <input type=radio name=read__today_radio id=read__radio03  class='RadioRead'> 
+                        <label for=read__radio03 style="left: 50px"></label>  
+                        <div class="read__today__item">
+                            <div>
+                                <img src="../images/read_today_03.png">
+                            </div>
+                            <h3>Квантовый компьютер</h3>    
+                            <p>01.02.22</p>    
+                            <div>
+                                <p class="article__like">350 <span> (+45)</span></p>
+                                <p class="article__message">25 <span> (+14)</span></p>
+                            </div>        
+                            <a href="#">Читать далее &#8594;</a>               
+                        </div>
+    
+                    </div>
+    
+                </div>                    
+            </div>                   
+                                
+            <div class="read__now">
+                <h3>
+                    Читают сейчас
+                </h3>
+
+                <a href="article.html" class="read__now__item">
+                    <p>
+                        Подходы к определению правового статуса криптовалют в ведущих странах мира
+                    </p>
+
+                    <div>
+                        <p class="article__eye">
+                            3.5
+                        </p>
+    
+                        <p class="article__like">
+                            350 <span>(+45)</span>
+                        </p>
+                    </div>  
+                </a> 
+                
+                <a href="article.html" class="read__now__item">
+                    <p>
+                        Управление децентрализованными системами с помощью технологии blockchain
+                    </p>
+
+                    <div>
+                        <p class="article__eye">
+                            3.5
+                        </p>
+    
+                        <p class="article__like">
+                            350 <span>(+45)</span>
+                        </p>
+                    </div>  
+                </a>  
+
+                <a href="article.html" class="read__now__item">
+                    <p>
+                        Биржа Poloniex: как преуспеть на медвежьем рынке
+                    </p>
+
+                    <div>
+                        <p class="article__eye"> 
+                            3.5
+                        </p>
+    
+                        <p class="article__like">
+                            350 <span>(+45)</span>
+                        </p>
+                    </div>  
+                </a>  
+
+
+                <a href="article.html" class="read__now__item">
+                    <p>
+                        Как майнинг влияет на видеокарту
+                    </p>
+
+                    <div>
+                        <p class="article__eye">
+                            3.5
+                        </p>
+    
+                        <p class="article__like"> 
+                            350 <span>(+45)</span>
+                        </p>
+                    </div>  
+                </a>  
+
+
+                <a href="article.html" class="read__now__item">
+                    <p>
+                        Просадки курса — не помеха: как заработать на криптовалютах с минимальным риском
+                    </p>
+
+                    <div>
+                        <p class="article__eye">
+                            3.5
+                        </p>
+    
+                        <p class="article__like">
+                            350 <span>(+45)</span>
+                        </p>
+                    </div>  
+                </a>  
+                
+            </div>                                                                                                                              
+        </div><!--article-->  
+
+        <footer>
+            <div class="container footer">
+                <div class="footer__nav">
+             
+                    <div class="footer__logo"><img src="../images/logo_footer.png"></div>                                                       
+                    <a href="mailto:business@swapster.tech">business@swapster.tech</a>  
+                    <a class="button_footer" href="tg://resolve?domain=it_academy_by">Запустить Swapster</a>                               
+                                
+                    <div class="border"></div>
+
+                    <div class="footer__menu">
+                        <a href="error.html" target="_blank" style="pointer-events: none; opacity: 0.6;">О сайте</a>
+                        <a href="actives.html" target="_blank">Активы и тарифы</a>
+                        <a href="howitworks.html" target="_blank">Как это работает</a>
+                        <a href="error.html" target="_blank">Криптобезопасность</a>
+                        <a href="news.html" target="_blank">Новости</a>
+                        <a href="error.html" target="_blank">Предложения</a>
+                    </div>
+
+                    <div class="footer__menu">                   
+                        <a href="error.html" target="_blank" style="pointer-events: none; opacity: 0.6;">Активы</a>
+                        <a href="error.html" target="_blank">Bitcoim (BTC)</a>
+                        <a href="error.html" target="_blank">Etherium (ETH)</a>
+                        <a href="error.html" target="_blank">Binace Coin (BNB)</a>
+                        <a href="error.html" target="_blank">Tron (TRX)</a>
+                        <a href="error.html" target="_blank">Tether (USDT)</a>
+                        <a href="error.html" target="_blank">USD Coin (USDC)</a>
+                    </div>                    
+
+                    <div> 
+                        <div class="footer__menu">
+                            <a href="error.html" target="_blank">Криптовалюты</a>
+                            <a href="error.html" target="_blank">Заработок криптовалют</a>
+                            <a href="error.html" target="_blank">Криптобезопасность</a>
+                            <a href="news.html" target="_blank">Криптоновости</a>
+                            <a href="main.html" target="_blank" style="opacity: 0;">Распорка</a>  
+                        </div>                  
+
+                        <div  class="network">       
+                            Подпишитесь на нас<br>
+                            <a href="https://www.facebook.com/park.itacademy/" target="_blank"></a>                            
+                            <a href="https://vk.com/park_itacademy" target="_blank"></a>
+                            <a href="https://www.instagram.com/it_academy.by/" target="_blank"></a>
+                            <a href="tg://resolve?domain=it_academy_by" target="_blank"></a>                           
+                        </div>   
+                    </div> 
+                </div>                                                                           
+           
+                <div class="about_support">
+                    <a href="error.html" target="_blank">Поддержка</a>
+                    <a href="error.html" target="_blank">Политика конфиденциальности</a>
+                    <a href="error.html" target="_blank">Условия использования</a>
+
+                    <a href="error.html" target="_blank">&#169; 2022 Swapster</a>                   
+                </div>          
+            </div>
+        </footer>       
+          
+
+    </div> <!--total_container-->          
+</body>
+
+</html>

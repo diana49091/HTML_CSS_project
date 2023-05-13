@@ -1,0 +1,213 @@
+
+/*ellipse*/
+#ellipse_01 {
+    position: absolute;
+    top: -750px;
+    right: -750px;
+}
+.ellipse_mobile img {
+    display: none;
+}
+
+/*header*/
+.header__nav > a[href^=actives] {
+    color: #07DBB4;   
+}
+
+
+
+/*intro*/
+.intro {
+    background: url(../images/actives_intro.svg) no-repeat top right;   
+    position: relative;
+    z-index: 3;
+}
+
+.intro h1 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 120%;
+    letter-spacing: 0.035em;
+}
+
+.intro .container > p {
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.6;
+    width: 52%;
+}
+
+
+.marquee {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #07DBB4;
+    overflow: hidden;
+    width: 100%; 
+    z-index: 5;   
+}
+
+.marquee div {
+    display: flex;   
+    width: 200%; 
+    animation: marquee 20s linear infinite;   
+}
+
+.marquee-item {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 0.035em;
+    margin: 4px 0;
+    width: 100%;
+    color: #06071B;
+    white-space: nowrap;   
+}
+
+@keyframes marquee{
+    0% {
+        transform: translateX(0%)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+}
+
+
+/*blockchain*/
+.blockchain__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blockchain__item {
+    width: 49%;
+    background: #121326;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.blockchain__item:hover {
+    transform: scale(1.05);
+}
+.blockchain h2 {
+    width: 80%;
+    margin: 50px auto 0;
+}
+.blockchain__item h3 {
+    font-size: 20px;
+    line-height: 140%;
+    border-bottom: 1px solid #1C1D39;
+    padding-bottom: 20px;
+}
+.blockchain__item h3::before {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background: url(../images/sprite_02.png) no-repeat;
+    background-position: -4px -4px;
+    position: relative;
+    top: 6px;
+}
+.blockchain__item:nth-child(2) h3::before {
+    background-position: -37px -4px;
+}
+.blockchain__item:nth-child(3) h3::before {
+    background-position: -4px -36px;
+}
+.blockchain__item:nth-child(4) h3::before {
+    background-position: -37px -36px;
+}
+.blockchain__item p {
+    opacity: 0.6;
+}
+
+
+
+/*price*/
+.price > p {
+    text-align: center;
+    opacity: 0.6;
+    margin: 0 auto 30px;
+    width: 78%;
+}
+.price_table {
+    display: grid;
+    grid-template-columns: [left] 1fr [right];
+    grid-template-rows: 1fr [second] 1fr 1fr 1fr 1fr [bottom];
+    margin: 0 auto;
+}
+.price_table > div {
+    display: grid;
+    grid-template-columns: 1fr [left] 1fr 1fr 1fr 1fr 1fr 1fr 1fr  [right];
+    grid-template-rows: 1fr;
+    padding: 5px 20px;
+    align-items: center;
+    
+}
+.price_table >div:first-child p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    margin: 0 0 0 10px;
+}
+.price_table > div:not(:first-child){
+    border-bottom: 1px solid #1C1D39;
+}
+.price_table > div p:not(:first-child) {
+    text-align: right;
+}
+.price_table > div:first-child {
+    background: linear-gradient(65.81deg, #4E067E 0%, #42E8E0 129.73%);
+    border-radius: 10px;
+}
+.price_table div:not(:first-child) p:first-child:before {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background: url(../images/sprite_02.png) no-repeat;
+    background-position: -4px -4px;
+    position: relative;
+    top: 8px;
+    margin-right: 10px;
+}
+.price_table div:not(:first-child):nth-child(3) p:first-child::before {
+    background-position: -37px -4px;
+}
+.price_table div:not(:first-child):nth-child(4) p:first-child::before {
+    background-position: -4px -36px;
+}
+.price_table div:not(:first-child):nth-child(5) p:first-child::before {
+    background-position: -37px -36px;
+}
+.price_mobile {
+    display: none;
+}
+
+/*creating*/
+.creating {
+    background: url(../images/block_4.png) no-repeat top center;
+    background-size: cover;
+    padding: 6% 2%;
+    border-radius: 15px;
+}
+.creating h1 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 130%;
+    letter-spacing: 2px;
+}
+.creating p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    opacity: 0.6;
+    width: 50%;
+    margin: 2% 0 5%;
+}

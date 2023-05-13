@@ -1,0 +1,175 @@
+@media only all and (max-width: 1150px) {  
+    .intro h1 {
+        font-size: 50px;
+    }
+    .intro .marquee-item {
+        font-size: 18px;
+    }
+}
+
+
+/*mobile*/
+@media only all and (max-width: 980px) { 
+    
+    #ellipse_01 {
+        display: none !important;
+    }
+    .ellipse_mobile img {
+        display: block;
+        position: absolute;
+        top: -300px;
+        right: -300px;
+        
+    } 
+    
+    /*intro*/
+    .intro {       
+        background: url(../images/actives_intro_mobile.png) no-repeat bottom center;
+        background-size: contain;
+        padding-bottom: 180px;  
+        margin-top: 40px; 
+        z-index: 1;
+    }
+    .intro .container {
+        padding-top: 0;
+    }
+    .intro h1 { 
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .intro .container > p  {
+        width: 100% !important;
+        padding-right: 10px;
+    }
+    .intro div:last-child {
+        bottom: 0px;
+    }
+    .intro .marquee-item {
+        font-size: 16px;
+        margin: 2px 0;
+    }
+
+    /*blockchain*/
+    .blockchain__content {
+        flex-direction: column;
+    }
+    .blockchain h2 {
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .blockchain__item {
+        width: 100%;
+        background: #121326;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 15px 0;
+      
+    }
+  
+    /*price*/
+    .price > h2 {
+        text-align: left;
+        font-size: 23px;
+    }
+    .price > p {
+        text-align: left;
+        margin: 0 auto 20px;
+        width: 100%;
+    }
+    .price_table {
+        display: none;
+    }
+    .price_mobile {
+        display: block;
+    }
+    .price_mobile input {
+        display: none;
+    }
+
+    .price_mobile label {
+        display: block;
+        width: 100%;
+        background: rgba(130, 135, 243, 0.2);
+        border-radius: 10px;
+        padding: 10px 10px 15px;
+        margin: 1px 0;
+        position: relative;
+    }
+    .price_mobile label::before {
+        content: "";
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        background: url(../images/sprite_02.png) no-repeat;
+        background-position: -4px -4px;
+        position: relative;
+        top: 8px;
+        margin-right: 10px;
+    }
+    .price_mobile label#label_price02::before {
+        background-position: -37px -4px;
+    }
+    .price_mobile label#label_price03::before {
+        background-position: -4px -36px;
+    }
+    .price_mobile label#label_price04::before {
+        background-position: -37px -36px;
+    }
+    .price_mobile label::after {
+        content: "\23F7";
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    .price_mobile input.PriceRead:checked + label::after {
+        content: "\23F5";
+        color: #07DBB4;
+        font-size: 21px;
+        right: 16px;
+    }
+
+    .price_mobile input.PriceRead:checked + label {
+        background: linear-gradient(65.81deg, #4E067E 0%, #42E8E0 129.73%);
+    }
+    .price_mobile input.PriceRead+ label + div{
+        display: none;
+    }
+    .price_mobile input.PriceRead:checked + label + div {
+        display: block;
+        width: 100%;   
+    }
+    .price_mobile_item > div {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #1C1D39;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .price_mobile_item > div p:first-child {
+        font-size: 14px;
+        line-height: 120%;
+        opacity: 0.6;
+        width: 45%;
+    } 
+
+
+    /*creating*/
+    .creating {        
+        background: url(../images/block_4mobile.png) no-repeat top center;
+        background-size: cover;
+        border-radius: 10px;
+        padding: 6% 2% 350px;        
+    }
+    .creating h1 {
+        font-size: 30px; 
+        margin: 20px 10px;
+    }
+    .creating p {
+        width: 100%;
+        padding: 0 10px;
+    }      
+    
+}
+

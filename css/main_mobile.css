@@ -1,0 +1,304 @@
+@media only all and (max-width: 1150px) {  
+    .steps__item div:first-child { 
+        top: -11px;
+        left: 5px;
+    }
+
+    .steps__item h3 {        
+        margin-left: 50px;
+        font-size: 30px;        
+        background: linear-gradient(27deg, #9600FB 20.47%, #42E8E0 50.29%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;    
+    }
+
+    .numbers_item {        
+        width: 24%;
+    }
+
+    #controls {
+        position: absolute;
+        top: 50px;
+        right: 75px;
+    }
+
+    .reviews__item {        
+        width: 49%;       
+        padding: 25px 23px;  
+    }
+
+    .launch h1 {        
+        margin: 1% 1% 5%;
+    }   
+
+}
+
+
+/*mobile*/
+@media only all and (max-width: 980px) {    
+    #ellipse_01, #ellipse_02, #ellipse_03, #ellipse_04 {
+        display: none !important;
+    }
+    #ellipse_mobile {
+        display: block;
+        position: absolute;
+        top: -300px;
+        right: -300px;
+    }
+
+  
+
+    /*intro*/
+    .intro {
+        background: none;
+        position: relative;
+        z-index: 2;
+        margin-bottom: -95px;
+    }
+    .intro div {
+        padding: 35px 10px 0px;  
+        margin: 0;    
+    }
+    .intro div h1 {       
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0.035em;
+        margin-bottom: 40px;
+    }
+    .intro div p {
+        width: 100%;
+    }
+    .intro .mobile__into {
+        display: block;
+        position: relative;
+        top: -100px;
+        width: 100%;
+        padding: 0px;
+    }  
+    .mobile__into img {
+        width: 100%;
+    }
+    .intro .button {
+        margin: 0px auto;
+        position: relative;
+        top: -125px;
+        width: 100%;
+    }
+
+    /*important*/
+    .important > div:first-child {
+        display: none;
+    }
+    .important h2 {
+        margin-bottom: 15px;
+    }
+    .important__item p {
+        padding: 0px 0 25px 0;  
+    }  
+    .important__item::before {    
+        position: relative;
+        top: 0px;
+    } 
+
+
+    /*creating*/
+    .creating {        
+        background: url(../images/block_4mobile.png) no-repeat top center;
+        background-size: cover;
+        border-radius: 10px;
+        padding: 6% 2% 350px;        
+    }
+    .creating h1 {
+        font-size: 30px; 
+        margin: 20px 10px;
+    }
+    .creating p {
+        width: 100%;
+        padding: 0 10px;
+    }    
+
+    /*steps*/
+    .steps__content {
+        flex-direction: column;
+    }
+    .steps__item {       
+        width: 100%; 
+        margin: 10px 0;
+        background: url(../images/step_mask.svg) no-repeat center center;
+        background-size: cover;
+        background-color: #121326;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;     
+        align-items: center;
+    }
+    .steps__item:nth-child(3) div:first-child {
+        width: 67%;
+    }
+    .steps__item div:first-child {
+       position: static;
+       width: 47%;  
+       float: none;     
+    }
+    .steps__item div:last-child {
+        margin: 10px;
+        padding: 0;
+    }    
+    .steps__item img {
+        width: 100%;
+    }
+    .steps__item h3 {
+        font-size: 24px;
+        line-height: 120%;
+        background: linear-gradient(16deg, #9600FB 8.47%, #42E8E0 31.29%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-left: 0;
+    }
+
+    /*coins*/
+    .coins {
+        margin-bottom: -20px;
+    }
+    .coins p {
+        width: 100%;
+    }
+    .coins  img:not(:last-child){
+        display: none;
+    }    
+    .coins img:last-child {
+        display: block;
+        position: relative;
+        top: -10px;
+        width: 100%;
+    }
+
+     /*functions + advantages radio */
+    .advantages__content, .functions__content {
+        flex-direction: column;
+    }
+    .advantages__item, .functions__item  {
+        width: 94% !important;       
+        margin: 15px auto !important;
+    }    
+    .advantages label, .functions label{
+        display: block;
+        border: 1px solid #07DBB4;
+        border-radius: 5px;
+        color: #07DBB4;
+        padding: 10px 20px;
+        margin: 0 10px;
+        width: 94%;
+        text-align: center;
+        transition-duration: 1s;
+    }
+    .advantages label:hover,
+    .functions label:hover {
+        cursor: pointer;
+        background-color: #07DBB4;
+        color: black;
+    }
+    .advantages label::after, 
+    .functions label::after {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-top: #07DBB4 solid 2px;
+        border-right: #07DBB4 solid 2px;
+        opacity: 0.6;        
+    }   
+    .advantages label:first-of-type::after,
+    .functions label:first-of-type::after {
+        position: relative;
+        top: -3px;
+        right: -24px;
+        transform: rotate(135deg);
+    }
+    .advantages label:last-of-type::after,
+    .functions label:last-of-type::after {
+        position: relative;
+        top: 4px;
+        right: -24px;
+        transform: rotate(-45deg);
+    }
+    .advantages .readMore + label + div,
+    .functions .readMore + label + div  {
+        display: none;  
+    }
+    .advantages .readMore:checked + label + div,
+    .functions .readMore:checked + label + div {
+        display: block;
+    }
+    
+    .advantages .readMore:checked + label,
+    .functions .readMore:checked + label  {
+        display: none;
+    }
+
+    .advantages .readMore + label + div + input + label,
+    .functions .readMore + label + div + input + label {   
+        display: none;        
+    }
+
+    .advantages .readMore:checked + label + div + input + label,
+    .functions .readMore:checked + label + div + input + label {
+        display: block;
+        cursor: pointer;
+    }
+
+    /*numbers*/
+    .numbers_content {
+        flex-direction: column;
+    }
+    .numbers_item {
+        width: 100%;
+    }
+    .numbers_item h2 {
+        background: linear-gradient(59.22deg, #9600FB 7.87%, #42E8E0 76.13%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;      
+    }
+    .numbers_item p {
+        padding: 0px 25px 25px;
+    }
+
+    /*reviews*/
+    .reviews h2 {
+        text-align: center;
+    }
+    #controls {
+        position: absolute;
+        top: 75px;
+        left: 0px;
+        right: 25px; 
+        text-align: center;
+    }
+    .reviews__inner {
+        padding: 55px 0;
+    }
+    .reviews__inner .reviews__item:last-child {
+        display: none;
+    }
+    .reviews__item {
+        width: 100%;
+    }
+
+    /*launch*/
+    .launch {
+        background: url(../images/launch_mobile.png) no-repeat bottom center;
+        background-size: cover;
+        padding: 40px 10px 320px;
+        border-radius: 10px;
+    }
+    .launch h1 {
+        font-size: 25px;
+        margin: 10px;
+        line-height: 150%;
+        letter-spacing: 2px;
+    }
+}
+

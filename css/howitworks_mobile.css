@@ -1,0 +1,148 @@
+@media only all and (max-width: 1150px) {
+    
+    /*intro*/
+    .intro h1 {
+        font-size: 36px;
+    }
+    .intro .container > p {
+        width: 55%;
+    }  
+
+    .intro .marquee-item {
+        font-size: 18px;
+    }
+
+    /*steps_of_launch*/ 
+    .steps_of_launch h2 {
+        font-size: 30px;
+    }
+
+    /*refill*/
+    .refill h2 {
+        font-size: 30px; 
+    } 
+ 
+    /*withdrawal*/
+    .steps_of_launch h2 {
+        font-size: 30px; 
+    } 
+  
+    /*steps_item*/   
+    .steps_item {
+        width: 28%; 
+    }  
+    .steps_item > div:last-child > div:last-child {
+        padding-left: 15px;
+    }
+    .steps_item > div:last-child > div:last-child p{
+        font-size: 12px;
+    }
+   
+    /*launch*/
+    .launch h1 {        
+        margin: 1% 1% 5%;
+    }    
+}
+
+
+/*mobile*/
+@media only all and (max-width: 980px) {    
+    
+    #ellipse_01, #ellipse_02, #ellipse_03, #ellipse_04 {
+        display: none !important;
+    }
+    .ellipse_mobile img {
+        display: block;
+        position: absolute;
+        top: -300px;
+        right: -300px;
+    }
+     
+
+    /*intro*/
+    .intro {
+        z-index: 1;
+    }
+    .intro .container{       
+        background: url(../images/howitworks_intro_mob.png) no-repeat bottom center;
+        background-size: auto;
+        padding-bottom: 250px !important;
+        padding-top: 50px !important;
+        z-index: 1;
+    }  
+    .intro h1 { 
+        font-size: 28px;
+    }
+    .intro .container > p  {
+        width: 100% !important;
+        padding-right: 10px;
+    }
+    .intro div:last-child {
+        bottom: 0px;
+    }
+    .intro .marquee-item {
+        font-size: 16px;
+        margin: 2px 0;
+    }
+
+
+    /*steps_of_launch*/
+    .steps_of_launch > div:last-child {
+        flex-direction: column;
+    }
+
+    /*refill*/
+    .refill > div:last-child {
+        flex-direction: column;
+    }  
+    /*withdrawal*/
+    .withdrawal > p { 
+        text-align: left; 
+        line-height: 170%;
+        font-size: 15px;
+    }
+    
+    .withdrawal > ul {
+        padding-left: 20px;        
+        margin: 10px;
+        text-align: left; 
+        line-height: 170%;
+        font-size: 15px;
+    }
+    .withdrawal .steps_item > div:last-child > div:last-child {
+        position: static;
+    }
+    /*steps_item*/
+    .steps_item {
+        width: 100%;
+        margin: 0px auto;
+    }
+    .steps_item > div:last-child {
+        justify-content: flex-start;
+    }
+    .steps_item:not(:last-child)::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url(../images/steps_arrow.png) no-repeat center center;
+        position: relative;
+        left: 45%;
+        top: -14px;        
+    }    
+
+    /*launch*/
+    .launch {
+        background: url(../images/launch_mobile.png) no-repeat bottom center;
+        background-size: cover;
+        padding: 40px 10px 320px;
+        border-radius: 10px;
+    }
+    .launch h1 {
+        font-size: 25px;
+        margin: 10px;
+        line-height: 150%;
+        letter-spacing: 2px;
+    }    
+}
+

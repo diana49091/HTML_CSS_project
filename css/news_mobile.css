@@ -1,0 +1,192 @@
+@media only all and (max-width: 1150px) {    
+    .filters h2 {
+        font-size: 35px;
+    }
+
+    .article_item h2 {
+        font-size: 21px;
+    }   
+
+    .article_filter a {
+        font-size: 14px;
+    }
+
+    .read__today__item > div:first-child + h3 + p + div p {
+        margin-right: 10px;
+    }
+}
+
+
+/*mobile*/
+@media only all and (max-width: 980px) {   
+    .total_container > div:first-child {
+        display: none;
+    } /*Убрали эллипсы*/
+   
+
+
+    /*article*/
+    .news > div:first-child {
+        margin-right: 0;
+    }
+    .article {
+        display: block;
+        margin: 20px 0;
+        padding: 30px 0;
+    }
+    .read__now {
+        display: none;
+    }
+    .article > div:first-child {
+        margin-right: 0;
+    }
+
+    .article__image {
+        height: 140px;
+        border-radius: 5px;
+    }
+    .news > div:first-child > input#folder2 + label + div .article__image {       
+        height: 170px;
+        border-radius: 10px;
+    }
+    .news > div:first-child > input#folder3 + label + div .article__image {       
+        height: 160px;
+        border-radius: 10px;
+    }
+    .news > div:first-child > input#folder4 + label + div .article__image {       
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    .article_item {
+        padding: 20px;
+        margin-bottom: 0;
+        border-radius: 0px;
+        background: none;
+    }
+    .article_item div:first-child p {
+        margin: 0;
+    }
+    .article_item div:first-child {
+        justify-content: flex-start;
+        font-size: 12px;
+    }
+    .article_item div:first-child p:first-child {
+        top: -8px;
+    }
+    .article_item [href$=html] {
+        padding: 4% 14%;
+        margin: 20px 0 30px;
+        border-radius: 5px;
+    }    
+    .article_item h2 {
+        font-size: 19px;
+        margin: -10px 0 0 0;
+    }
+    .article_item p {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }    
+    .article_item div:last-child {
+        margin: 0 !important;
+        font-size: 12px;
+    }
+    .article__image {
+        height: 140px;
+        border-radius: 5px;
+    }
+
+
+
+    .filters {
+        margin: 0;
+        background: none;
+        padding: 20px;
+        margin: 10px;
+    }
+    .filters h2 {
+        display: none;
+    }
+
+    .news > div:first-child > label {
+        background: none;
+        border-radius: 0px;
+        padding: 0px; 
+        width: auto;   
+        font-size: 13px;    
+        opacity: 0.3;
+        margin: 10px 20px 0 0;
+        top: 12px;
+        left: 20px;
+    }
+
+    .article_filter a:active {
+        box-shadow: none;
+    }  
+
+    .news > div:first-child > label#label__folder2 {
+        left: 20px;
+        top: 35px;
+    }
+    .news > div:first-child > label#label__folder3 {
+        left: calc(30px + 45%);
+    }
+    .news > div:first-child > label#label__folder4 {
+        left: calc(30px + 40%);
+        top: 35px;
+    }
+
+    .news > div:first-child > input.newsFolder:checked + label{
+        background: none;
+        font-size: 13px;
+        color: #07DBB4;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    .news > div:first-child > input.newsFolder + label + div{
+        display: none;
+    }
+    .news > div:first-child > input.newsFolder:checked + label + div {
+        display: block;
+        width: 100%;   
+    }
+    
+    
+    .read__today {
+    padding: 20px 20px 40px;
+    }
+    .read__today > p:first-child {
+        font-size: 25px;
+        opacity: 1;
+        font-weight: 500;
+        margin: 10px 0 20px;
+    }  
+    .read__today__item p {
+        display: none;
+    }
+    .read__today__item h3 {
+        margin: 10px 0 20px;
+    }
+    .read__today label {
+        display: inline-block;
+        clip-path: circle(50% at 50% 50%);
+        width: 10px;
+        height: 10px;
+        background-color: #282A4F;
+        position: absolute;
+        bottom: -30px;
+    }    
+    .read__today input.RadioRead:checked + label{
+        background-color: #8287F3;
+    }
+    .read__today input.RadioRead + label + div{
+        display: none;
+    }
+    .read__today input.RadioRead:checked + label + div {
+        display: block;
+        width: 100%;   
+    }
+
+}

@@ -1,0 +1,129 @@
+#ellipse_01 {
+    position: absolute;
+    top: -1100px;
+    right: -1000px;
+    z-index: 0;
+}
+#ellipse_02 {
+    position: absolute;
+    bottom: -1100px;
+    left: -1000px;   
+    z-index: 0; 
+}
+#ellipse_mob {
+    display: none;
+}
+
+.error_content{    
+    margin: 0 auto;
+    padding: 25vh 0;
+    z-index: 5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error_content > p{
+    opacity: 0.8;
+    text-align: center;
+    margin: 30px auto 50px;
+}
+.error_bit {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error_bit p{
+    color: #07DBB4;
+    text-align: center;
+    font-size: 260px;
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+}
+.error_bit img {
+    display: block;
+    width: 30%;
+    animation: linear 4s bit infinite;
+}
+@keyframes bit {
+    0% {}
+    100% {transform: rotate(360deg);}   
+}
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    border: 1px solid #07DBB4;
+    border-radius: 15px;
+    z-index: 10;
+    animation: linear 2s shadow infinite;
+}
+@keyframes shadow {
+    0% {}
+    20% {box-shadow: 0 0 10px #8287F3 inset;}
+    40% {box-shadow: 0 0 20px #8287F3 inset;}
+    80% {box-shadow: 0 0 10px #8287F3 inset;}
+    100% {box-shadow: 0 0 0px #8287F3 inset;}   
+}
+a:hover {   
+    color: #06071B;
+    background-color: #07DBB4;
+    cursor: pointer;
+}
+
+
+@media only all and (max-width: 1150px) {
+    .error_bit p {
+        font-size: 240px;
+    }
+}
+
+
+
+/*mobile*/
+@media only all and (max-width: 980px) {
+    body {
+        margin: 0;
+    }
+    .total_container {
+        max-width: 350px;
+    }
+
+    .error_content{    
+        margin: 0 auto; 
+        padding: 20vh 20px;  
+    }
+
+    .error_content > p {
+        font-size: 20px;
+    }
+    .error_bit {
+        width: 100%;
+        margin: 20px auto;
+    }
+    .error_bit p {
+        font-size: 140px;
+    }
+    .error_bit img {
+        width: 40%;
+    }
+    a {
+        border-radius: 10px;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    #ellipse_01, #ellipse_02 {
+        display: none;
+    }   
+    #ellipse_mob {
+        display: block;
+        position: absolute;
+        top: -400px;
+        right: -350px;  
+        z-index: 0;
+    }
+}

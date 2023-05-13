@@ -1,0 +1,129 @@
+@media only all and (max-width: 1150px) {   
+    /*crumbs*/
+    .crumbs {
+        padding: 0 4% !important;
+    }
+    .article_item h2 {
+        font-size: 21px;
+    }   
+    .article_filter a {
+        font-size: 14px;
+    }
+    .read__today__item > div:first-child + h3 + p + div p {
+        margin-right: 10px;
+    }
+}
+
+
+/*mobile*/
+@media only all and (max-width: 980px) {
+   
+    .total_container > div:first-child {
+        display: none;
+    } /*Убрали эллипсы*/
+
+  
+    /*crumbs*/
+    .crumbs {
+        padding: 30px 4%;
+        position: relative;
+        top: 40px;
+        z-index: 1;
+    }
+    .crumbs_content {
+        margin: 0 0 0 10px;
+        text-align: left;
+    }  
+
+
+    /*article*/
+    .article {
+        display: block;
+        margin: 20px 0;
+        padding: 30px 0;
+    }
+    .read__now {
+        display: none;
+    }
+    .article > div:first-child {
+        margin-right: 0;
+    }
+    .article_item div:first-child p {
+        margin: 0;
+    }
+    .article_item h2 {
+        font-size: 19px;
+    }
+    .article_item {
+        padding: 20px;
+        margin: -20px 0 0;
+        border-radius: 0px;
+        background: none;
+    }
+    .article_item iframe { 
+        height: 250px;
+        margin: 40px auto 0;
+    }
+    .article_item div:last-child {
+        margin: 0 !important;
+    }
+    .article_filter {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0px;
+        flex-wrap: wrap;
+    }
+    .article_filter a {
+        background: none;
+        border-radius: 0px;
+        padding: 0px; 
+        width: auto;       
+        opacity: 0.3;
+        margin: 10px 27px 0 0;
+    }
+    .article_filter a:hover {
+        background: none;
+        font-size: 13px;
+        color: #07DBB4;
+        opacity: 0.8;
+    }
+    .article_filter a:active {
+        box-shadow: none;
+    }      
+    .read__today {
+    padding: 20px 20px 40px;
+    }
+    .read__today > p:first-child {
+        font-size: 25px;
+        opacity: 1;
+        font-weight: 500;
+        margin: 10px 0 20px;
+    }  
+    .read__today__item p {
+        display: none;
+    }
+    .read__today__item h3 {
+        margin: 10px 0 20px;
+    }
+    .read__today label {
+        display: inline-block;
+        clip-path: circle(50% at 50% 50%);
+        width: 10px;
+        height: 10px;
+        background-color: #282A4F;
+        position: absolute;
+        bottom: -30px;
+    }    
+    .read__today input.RadioRead:checked + label{
+        background-color: #8287F3;
+    }
+    .read__today input.RadioRead + label + div{
+        display: none;
+    }
+    .read__today input.RadioRead:checked + label + div {
+        display: block;
+        width: 100%;   
+    }       
+
+}
+
